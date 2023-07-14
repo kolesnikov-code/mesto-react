@@ -10,12 +10,72 @@ function App() {
       <Main />
       <Footer />
 
-      <PopupWithForm name="edit-user-info" title="Редактировать профиль" buttonText="Сохранить" />
+      <PopupWithForm name="edit-user-avatar-form" title="Обновить аватарь">
+        <input
+          className="form__input"
+          id="form-input-value-avatar-link"
+          name="avatarlink"
+          type="url"
+          placeholder="Ссылка на новый аватар"
+          required=""
+        />
+        <span className="form-input-value-avatar-link-error form__error" />
+      </PopupWithForm>
 
-      <div className="popup" id="popup-edit-user-avatar">
+      <PopupWithForm name="edit-user-info-form" title="Редактировать профиль">
+        <input
+          className="form__input"
+          id="form-input-value-username"
+          name="username"
+          type="text"
+          minLength={2}
+          maxLength={40}
+          placeholder="Ваше имя"
+          required=""
+        />
+        <span className="form-input-value-username-error form__error" />
+        <input
+          className="form__input"
+          id="form-input-value-about-self"
+          name="aboutself"
+          type="text"
+          minLength={2}
+          maxLength={200}
+          placeholder="Напишите о себе"
+          required=""
+        />
+        <span className="form-input-value-about-self-error form__error" />
+      </PopupWithForm>
+
+      <PopupWithForm name="add-new-item-form" title="Новое место" buttonText="Создать">
+        <input
+          className="form__input"
+          id="form-input-value-item-title"
+          name="title"
+          type="text"
+          minLength={2}
+          maxLength={30}
+          placeholder="Название"
+          required=""
+        />
+        <span className="form-input-value-item-title-error form__error" />
+        <input
+          className="form__input"
+          id="form-input-value-item-link"
+          name="link"
+          type="url"
+          placeholder="Ссылка на картинку"
+          required=""
+        />
+        <span className="form-input-value-item-link-error form__error" />
+      </PopupWithForm>
+
+      <PopupWithForm name="delete-item-form" title="Вы уверены?" buttonText="Да" />
+
+      {/* <div className="popup" id="popup-edit-user-avatar-form">
         <div
-          className="popup__container popup__container-edit-user-avatar"
-          id="popup-container-edit-user-avatar"
+          className="popup__container popup__container-edit-user-avatar-form"
+          id="popup-container-edit-user-avatar-form"
         >
           <form
             className="form"
@@ -47,9 +107,9 @@ function App() {
             />
           </form>
         </div>
-      </div>
-      <div className="popup" id="popup-edit-user-info">
-        <div className="popup__container" id="popup-container-edit-user-info">
+      </div> */}
+      {/* <div className="popup" id="popup-edit-user-info-form">
+        <div className="popup__container" id="popup-container-edit-user-info-form">
           <form className="form" id="edit-user-info-form" name="edit-user-info-form" noValidate="">
             <h2 className="form__title">Редактировать профиль</h2>
             <input
@@ -88,9 +148,9 @@ function App() {
             />
           </form>
         </div>
-      </div>
-      <div className="popup" id="popup-add-new-item">
-        <div className="popup__container" id="popup-container-add-new-item">
+      </div> */}
+      {/* <div className="popup" id="popup-add-new-item-form">
+        <div className="popup__container" id="popup-container-add-new-item-form">
           <form className="form" name="add-new-item-form" noValidate="">
             <h2 className="form__title">Новое место</h2>
             <input
@@ -123,36 +183,25 @@ function App() {
             />
           </form>
         </div>
-      </div>
-      <div className="popup" id="popup-delete-item">
+      </div> */}
+      {/* <div className="popup" id="popup-delete-item-form">
         <div
-          className="popup__container popup__container-delete-item"
-          id="popup-container-delete-item"
+          className="popup__container popup__container-delete-item-form"
+          id="popup-container-delete-item-form"
         >
           <form className="form" name="delete-item-form" noValidate="">
             <h2 className="form__title">Вы уверены?</h2>
-            <button className="form__button-save" id="form-delete-item-button-save" type="submit">
+            <button className="form__button-save" id="delete-item-form-button-save" type="submit">
               Да
             </button>
             <button
               className="popup__button-close"
-              id="form-delete-item-button-close"
+              id="delete-item-form-button-close"
               type="button"
             />
           </form>
         </div>
-      </div>
-      <div className="popup popup_opacity-09" id="popup-view-full-image">
-        <div className="popup__full-image-container">
-          <img className="popup__full-image" id="popup-full-image" />
-          <p className="popup__full-image-caption" />
-          <button
-            className="popup__button-close"
-            id="popup-view-full-image-button-close"
-            type="button"
-          />
-        </div>
-      </div>
+      </div> */}
     </>
   );
 }
