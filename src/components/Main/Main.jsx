@@ -1,9 +1,9 @@
-export default function Main() {
+export default function Main({ onEditAvatar }) {
   return (
     <main className="content">
       <section className="profile">
         <div className="profile__avatar-edit-button">
-          <img className="profile__avatar" src="#" alt="Аватар профиля" />
+          <img className="profile__avatar" src="#" alt="Аватар профиля" onClick={onEditAvatar} />
         </div>
         <div className="profile__info">
           <h1 className="profile__name" />
