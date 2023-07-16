@@ -7,14 +7,21 @@ import { useState } from 'react';
 
 function App() {
   const [isEditAvatarPopupOpen, setEditAvatarPopupOpen] = useState(false);
-  //const [isEditProfilePopupOpen, setEditProfilePopupOpen] = useState(false);//
-  //const [isAddPlacePopupOpen, setAddPlacePopupOpen] = useState(false);//
+  const [isEditProfilePopupOpen, setEditProfilePopupOpen] = useState(false);
+  const [isAddPlacePopupOpen, setAddPlacePopupOpen] = useState(false);
 
   function handleEditAvatarClick() {
     setEditAvatarPopupOpen(true);
   }
-  // function handleEditProfileClick() {} //
-  // function handleAddPlaceClick() {} //
+
+  function handleEditProfileClick() {
+    setEditProfilePopupOpen(true);
+  }
+
+  function handleAddPlaceClick() {
+    setAddPlacePopupOpen(true);
+  }
+
   // function handleDeleteCardClick() {} //
   // function handleOpenCardClick() {} //
 
@@ -22,7 +29,11 @@ function App() {
     <>
       <Header />
 
-      <Main onEditAvatar={handleEditAvatarClick} />
+      <Main
+        onEditAvatar={handleEditAvatarClick}
+        onEditProfile={handleEditProfileClick}
+        onAddPlace={handleAddPlaceClick}
+      />
 
       <Footer />
 
@@ -42,7 +53,11 @@ function App() {
         <span className="form-input-value-avatar-link-error form__error" />
       </PopupWithForm>
 
-      <PopupWithForm name="edit-user-info-form" title="Редактировать профиль">
+      <PopupWithForm
+        name="edit-user-info-form"
+        title="Редактировать профиль"
+        isOpen={isEditProfilePopupOpen}
+      >
         <input
           className="form__input"
           id="form-input-value-username"
@@ -67,7 +82,12 @@ function App() {
         <span className="form-input-value-about-self-error form__error" />
       </PopupWithForm>
 
-      <PopupWithForm name="add-new-item-form" title="Новое место" buttonText="Создать">
+      <PopupWithForm
+        name="add-new-item-form"
+        title="Новое место"
+        buttonText="Создать"
+        isOpen={isAddPlacePopupOpen}
+      >
         <input
           className="form__input"
           id="form-input-value-item-title"
