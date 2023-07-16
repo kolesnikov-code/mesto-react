@@ -1,7 +1,7 @@
 export default function PopupWithForm({ name, title, buttonText, isOpen, children }) {
   return (
     <div className={`popup popup_type_${name} ${isOpen && 'popup_opened'}`}>
-      <div className="popup__container popup__container-${name}" id={`popup-container-${name}`}>
+      <div className={`popup__container popup__container-${name}`} id={`popup-container-${name}`}>
         <form className="form" name={name} noValidate="">
           <h2 className="form__title">{title}</h2>
           {children}
