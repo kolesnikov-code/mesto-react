@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Проект: Место
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Практическая работа №10
 
-## Available Scripts
+### О проекте
 
-In the project directory, you can run:
+Практическая работа студента Яндекс.Практикума - личная страница студента-разработчика онлайн-платформы Яндекс.Практикум.
 
-### `npm start`
+**Особенности**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+При разработке сайта используются:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- HTML
+- CSS
+- JavaScript
+- Webpack
+- React
 
-### `npm test`
+Сайт имеет адаптивный дизайн под следующие разрешения экрана:
+<br>320px-767px,
+<br>768px-1023px,
+<br>1024px-1279px,
+<br>1280px+
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Реализованы следующие функции:
 
-### `npm run build`
+- валидация полей, проверка корректности ввода (длина ввода, тип данных);
+- отключение кнопки "Сохранить" / "Создать" при невалидных данных в поле ввода;
+- функция редактирования имени пользователя и описания (без сохранения на сервер);
+- функция добавления новой карточки с названием (без сохранения на сервер);
+- функция открытия карточки для просмотра полного изображения;
+- функция закрытия карточки нажатием на Overlay;
+- функция закрытия карточки нажатием клавиши Escape;
+- функция "лайк" для каждой" карточки;
+- функция удаления карточки;
+- счётчик лайков у карточки;
+- редактирование инофрмации о пользователе;
+- редактирование фото пользователя;
+- запросы к серверу: массив карточек, количество лайков, удаление и добавление карточки, смена аватарки и т.д.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Весь функционал сайта: создание карточки, валидация форм, попапы и т.д. реализованы через компоненты, пропсы, API.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Планы по развитию проекта**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+В дальнейшем планируется добавление следующих функций:
+<br>Редактирование заголовка фото
+<br>И другие функции, которые могут быть в будущих заданиях
 
-### `npm run eject`
+**Автор**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Анатолий Колесников. 17.07.2023г.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ссылка на сайт: https://kolesnikov-code.github.io/mesto-react/
