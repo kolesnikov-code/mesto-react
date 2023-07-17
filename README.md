@@ -50,4 +50,7 @@
 
 Анатолий Колесников. 17.07.2023г.
 
-Ссылка на сайт: https://kolesnikov-code.github.io/mesto-react/
+Ссылка на сайт (error 404): https://kolesnikov-code.github.io/mesto-react/
+
+Ссылка (пустой экран без разметки): https://kolesnikov-code.github.io/mesto-react/public/
+Ссылка (пустой экран без разметки): https://kolesnikov-code.github.io/mesto-react/public/index.html
