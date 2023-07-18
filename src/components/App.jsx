@@ -9,6 +9,9 @@ function App() {
   const [isEditAvatarPopupOpen, setEditAvatarPopupOpen] = useState(false);
   const [isEditProfilePopupOpen, setEditProfilePopupOpen] = useState(false);
   const [isAddPlacePopupOpen, setAddPlacePopupOpen] = useState(false);
+  const [selectedCard, setSelectedCard] = useState({});
+  const [isImagePopupOpen, setImagePopupOpen] = useState(false);
+  /*  const [isDeletePopupOpen, setDeletePopupOpen] = useState(false); */
 
   function handleEditAvatarClick() {
     setEditAvatarPopupOpen(true);
@@ -22,8 +25,22 @@ function App() {
     setAddPlacePopupOpen(true);
   }
 
-  // function handleDeleteCardClick() {} //
-  // function handleOpenCardClick() {} //
+  function closeAllPopups() {
+    setEditAvatarPopupOpen(false);
+    setEditProfilePopupOpen(false);
+    setAddPlacePopupOpen(false);
+    setImagePopupOpen(false);
+  }
+
+  /*  function handleDeleteCardClick() {
+    setDeletePopupOpen(true);
+  } */
+
+  function handleCardClick(card) {
+    setSelectedCard(card);
+    setImagePopupOpen(true);
+    console.log(card);
+  }
 
   return (
     <>
@@ -33,6 +50,8 @@ function App() {
         onEditAvatar={handleEditAvatarClick}
         onEditProfile={handleEditProfileClick}
         onAddPlace={handleAddPlaceClick}
+        onCardClick={handleCardClick}
+        /* onDeleteCard={handleDeleteCardClick} */
       />
 
       <Footer />
@@ -41,6 +60,7 @@ function App() {
         name="edit-user-avatar-form"
         title="Обновить аватар"
         isOpen={isEditAvatarPopupOpen}
+        onClose={closeAllPopups}
       >
         <input
           className="form__input"
@@ -57,6 +77,7 @@ function App() {
         name="edit-user-info-form"
         title="Редактировать профиль"
         isOpen={isEditProfilePopupOpen}
+        onClose={closeAllPopups}
       >
         <input
           className="form__input"
@@ -87,6 +108,7 @@ function App() {
         title="Новое место"
         buttonText="Создать"
         isOpen={isAddPlacePopupOpen}
+        onClose={closeAllPopups}
       >
         <input
           className="form__input"
@@ -112,7 +134,7 @@ function App() {
 
       <PopupWithForm name="delete-item-form" title="Вы уверены?" buttonText="Да" />
 
-      <ImagePopup />
+      <ImagePopup card={selectedCard} isOpen={isImagePopupOpen} onClose={closeAllPopups} />
     </>
   );
 }
